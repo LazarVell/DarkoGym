@@ -57,18 +57,41 @@ h1 {
 }
 
 .wrapper p {
+  display: flex;
   flex-wrap: wrap;
   max-width: 500px;
   font-size: 26px;
   min-width: 400px;
+  padding: 20px;
 }
 
 .wrapper img {
   max-width: 600px;
-  max-height: 400 px;
+  max-height: 400px;
   min-width: 400px;
   min-height: 300px;
 }
+
+@media only screen and (max-width: 600px) {
+.wrapper {
+  flex-direction: column;
+}
+
+.wrapper img {
+  max-width: 300px;
+  max-height: 201px;
+  min-width: 299px;
+  min-height: 200px;
+}
+
+.wrapper p {
+  font-size: 14px;
+  max-width: 250px;
+  min-width: 230px;
+  text-align: justify;
+}
+}
+  
 
 .content img {
   max-width: 400px;
@@ -99,7 +122,6 @@ a, p {
   gap: 20px;
   min-height: 50px;
 }
-
 
 .span-ig {
   display: inline-block;
@@ -164,5 +186,8 @@ ul {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
+/* for mobile, displays menu once clicked */
+.dropdown:focus .dropdown-content {display: block;}
+
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: rgb(201, 134, 34); color: rgb(56, 55, 55);} 
+.dropdown:hover .dropbtn {background-color: rgb(201, 134, 34); color: rgb(56, 55, 55);}
